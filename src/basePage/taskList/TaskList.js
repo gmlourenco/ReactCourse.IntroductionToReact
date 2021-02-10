@@ -1,6 +1,6 @@
 import React from "react";
 import "./taskList.css";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 import TaskItem from "../taskItem/TaskItem";
 
@@ -58,8 +58,8 @@ export default function TaskList({
   );
 }
 
-TaskList.PropTypes = {
-  title: PropTypes.string.isRequired,
-  onAddTask: PropTypes.func.isRequired,
-  tasks: PropTypes.array.isRequired
+TaskList.propTypes = {
+  title: propTypes.string.isRequired,
+  onAddTask: propTypes.func.isRequired,
+  tasks: propTypes.array.isRequired
 };
