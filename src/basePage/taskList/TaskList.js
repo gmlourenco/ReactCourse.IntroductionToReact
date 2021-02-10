@@ -28,7 +28,7 @@ export default function TaskList({
   }
 
   const addTask = () => {
-    onAddTask("New Task", taskState);
+    onAddTask("Double-click here to add my name", taskState);
   };
 
   return (
@@ -48,10 +48,12 @@ export default function TaskList({
             />
           );
         })}
+        {tasks.length === 0 && <div className="empty-list">Empty List</div>}
+        <button className="btn" onClick={addTask}>
+          Add Task
+        </button>
+        {tasks.length}
       </div>
-      <button className="btn" onClick={addTask}>
-        Add Task
-      </button>
     </div>
   );
 }
